@@ -37,7 +37,7 @@
                     <img src="./img/logo.png" alt="PinBase" width="100" height="100" class="d-inline-block align-text-top">
                     <h1 class="display-4 titleFont">Login</h1>
                     <hr>
-                    <form action="./includes/_auth.php" method="POST">
+                    <form id="loginForm">
                         <div class="mb-3">
                             <label for="email" class="form-label">Email Address</label>
                             <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
@@ -79,6 +79,7 @@
     <!-- Script Imports -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="./js/scripts.js"></script>
     <!-- Script Imports -->
 </body>
 

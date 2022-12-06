@@ -23,13 +23,12 @@ if (mysqli_num_rows($result) == 1) { //Checks if info matches database
         $_SESSION['id'] = $row['UUID']; //Set ID
         $_SESSION['username'] = $row['username']; //Set Username
         $_SESSION['email'] = $email; //Set Email
-        header("location: ../index.php"); //Redirect to Index (Correct Password)
+        
+        echo "You have successfully logged in.";
     } else { //If Password is Incorrect
         echo "Password is incorrect.";
-        header("location: ../login.php"); //Redirect to Login (Incorrect Password)
     }
 } else {
-    header("location: ../login.php"); //Redirect to Login (Incorrect Email)
     echo "Email is incorrect.";
 }
 
