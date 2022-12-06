@@ -4,12 +4,12 @@ $('#loginForm').submit(function(e) {
 
     $.ajax({
         type:'POST',
-        url:'./includes/_auth.php',
+        url:'./includes/_auth',
         data:$('#loginForm').serialize(),
 
         success: function(data) {
           if (data == "You have successfully logged in.") {
-            location.href = "./index.php";
+            location.href = "./index";
             alert(data);
           }
         },           

@@ -32,12 +32,12 @@ if (!isset($_SESSION['loggedin'])) {
             <div class="w-100 d-flex  justify-content-around">
                 <div class="d-flex justify content-center align-items-center">
                     <img src="./img/logo.png" width="50" height="50" class="d-inline-block me-2">
-                    <h3 class="float-md-end mb-0"><a href="./index.php" class="text-white text-decoration-none titleFont">PinBase</a></h3>
+                    <h3 class="float-md-end mb-0"><a href="./index" class="text-white text-decoration-none titleFont">PinBase</a></h3>
                 </div>
                 <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="nav-link" aria-current="page" href="./index.php">Home</a>
-                    <a class="nav-link active" href="./createPin.php">Create a Pin</a>
-                    <a class="nav-link" href="./login.php">Login/Register</a>
+                    <a class="nav-link" aria-current="page" href="./index">Home</a>
+                    <a class="nav-link active" href="./createPin">Create a Pin</a>
+                    <a class="nav-link" href="./login">Login</a>
                 </nav>
             </div>
         </header>
@@ -106,7 +106,7 @@ if (!isset($_SESSION['loggedin'])) {
 
     <!-- Footer -->
     <footer class="container-fluid mt-auto text-white-50 bg-dark d-flex justify-content-center flex-column align-items-center">
-        <p><a href="./index.php" class="text-white">Pinbase</a> - Developed by Finley Pettit.</p>
+        <p><a href="./index" class="text-white">Pinbase</a> - Developed by Finley Pettit.</p>
         <p>&copy; Del</p>
     </footer>
     <!-- Footer -->

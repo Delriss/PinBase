@@ -1,4 +1,8 @@
 <?php
+if(!isset($_POST['email']) || !isset($_POST['password'])) {
+    header("Location: ../login");
+}
+
 require_once("./_connect.php"); //Connect to Database
 
 $email = $_POST['email']; //Grab Email

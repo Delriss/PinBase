@@ -26,11 +26,11 @@
             <!-- Navbar -->
             <header class="mb-auto">
                 <div>
-                    <h3 class="float-md-start mb-0"><a href="./index.php" class="text-white text-decoration-none titleFont">PinBase</a></h3>
+                    <h3 class="float-md-start mb-0"><a href="./index" class="text-white text-decoration-none titleFont">PinBase</a></h3>
                     <nav class="nav nav-masthead justify-content-center float-md-end">
-                        <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
-                        <a class="nav-link" href="./createPin.php">Create a Pin</a>
-                        <a class="nav-link" href="./login.php">Login/Register</a>
+                        <a class="nav-link active" aria-current="page" href="./index">Home</a>
+                        <a class="nav-link" href="./createPin">Create a Pin</a>
+                        <a class="nav-link" href="./login">Login</a>
                     </nav>
                 </div>
             </header>
@@ -42,14 +42,14 @@
                 <hr>
                 <p class="lead">Create saveable text snippets to store and share around with friends! PinBase is your own repository of information, with detailed statistics for each of your pins.</p>
                 <p class="lead">
-                    <a href="./createPin.php" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-dark aniButton">Create a Pin</a>
+                    <a href="./createPin" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-dark aniButton">Create a Pin</a>
                     <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-dark aniButton">View Pins</a>
                 </p>
             </main>
             <!--Main-->
             <!--Footer-->
             <footer class="mt-auto text-white-50">
-                <p><a href="./index.php" class="text-white">Pinbase</a> - Developed by Finley Pettit.</p>
+                <p><a href="./index" class="text-white">Pinbase</a> - Developed by Finley Pettit.</p>
                 <p>&copy; Del</p>
             </footer>
             <!--Footer-->

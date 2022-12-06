@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Finley Pettit">
     <link rel="icon" href="./img/favicon.ico" type="favicon">
-    <title>PinBase - Login</title>
+    <title>PinBase - Register</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./stylesheets/style.css">
@@ -35,12 +35,16 @@
             <main class="px-3">
                 <div class="container rounded">
                     <img src="./img/logo.png" alt="PinBase" width="100" height="100" class="d-inline-block align-text-top">
-                    <h1 class="display-4 titleFont">Login</h1>
+                    <h1 class="display-4 titleFont">Register</h1>
                     <hr>
                     <form id="loginForm">
                         <div class="mb-3">
                             <label for="email" class="form-label">Email Address</label>
                             <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="username" class="form-control" id="username" name="username">
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
@@ -49,7 +53,7 @@
                         <button type="submit" class="btn btn-primary aniButton">Login</button>
                         
                     </form>
-                    <span>Don't have an account? Register <a class="text-white" href="./register">here!</a></span>
+                    <span>Already have an account? Login <a class="text-white" href="./login">here!</a></span>
                 </div>
             </main>
             <!--Main-->
