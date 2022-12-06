@@ -10,7 +10,7 @@
     <title>PinBase - Home</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
     <!-- Stylesheets -->
@@ -40,8 +40,8 @@
                 <hr>
                 <p class="lead">Create saveable text snippets to store and share around with friends! PinBase is your own repository of information, with detailed statistics for each of your pins.</p>
                 <p class="lead">
-                    <a href="./createPin.php" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-dark">Create a Pin</a>
-                    <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-dark">View Pins</a>
+                    <a href="./createPin.php" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-dark aniButton">Create a Pin</a>
+                    <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-dark aniButton">View Pins</a>
                 </p>
             </main>
             <!--Main-->
