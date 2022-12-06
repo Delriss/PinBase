@@ -1,3 +1,10 @@
+<?php //Detect if user is logged in
+if (!isset($_SESSION)) {
+    header("Location: ./login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +17,7 @@
     <title>PinBase - New Pin</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Stylesheets -->
 
@@ -24,12 +31,12 @@
             <div class="w-100 d-flex  justify-content-around">
                 <div class="d-flex justify content-center align-items-center">
                     <img src="./img/logo.png" width="50" height="50" class="d-inline-block me-2">
-                    <h3 class="float-md-end mb-0"><a href="./index.php" class="text-white text-decoration-none">PinBase</a></h3>
+                    <h3 class="float-md-end mb-0"><a href="./index.php" class="text-white text-decoration-none titleFont">PinBase</a></h3>
                 </div>
                 <nav class="nav nav-masthead justify-content-center float-md-end">
                     <a class="nav-link" aria-current="page" href="./index.php">Home</a>
                     <a class="nav-link active" href="./createPin.php">Create a Pin</a>
-                    <a class="nav-link" href="#">Login/Register</a>
+                    <a class="nav-link" href="./login.php">Login/Register</a>
                 </nav>
             </div>
         </header>
@@ -41,7 +48,7 @@
     <!-- HEADER BLOCK -->
     <div class="px-4 py-5 my-5 text-center">
         <!-- Title -->
-        <h1 class="display-5 fw-bold">Create a Pin!</h1>
+        <h1 class="display-5 fw-bold titleFont">Create a Pin!</h1>
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">Enter text to save and share. This can be: code, lyrics, documentation and more!</p>
             <!-- Title -->

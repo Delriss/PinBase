@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,16 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Finley Pettit">
     <link rel="icon" href="./img/favicon.ico" type="favicon">
-    <title>PinBase - Home</title>
+    <title>PinBase - Login</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./stylesheets/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
     <!-- Stylesheets -->
-
 </head>
 
 <body class="d-flex h-100 text-center text-white bg-dark">
@@ -28,23 +24,32 @@
                 <div>
                     <h3 class="float-md-start mb-0"><a href="./index.php" class="text-white text-decoration-none titleFont">PinBase</a></h3>
                     <nav class="nav nav-masthead justify-content-center float-md-end">
-                        <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
+                        <a class="nav-link" aria-current="page" href="./index.php">Home</a>
                         <a class="nav-link" href="./createPin.php">Create a Pin</a>
-                        <a class="nav-link" href="./login.php">Login/Register</a>
+                        <a class="nav-link active" href="./login.php">Login/Register</a>
                     </nav>
                 </div>
             </header>
             <!-- Navbar -->
             <!--Main-->
             <main class="px-3">
-                <img src="./img/logo.png" alt="PinBase" width="200" height="200" class="d-inline-block align-text-top">
-                <h1 class="display-1 titleFont">Welcome to PinBase!</h1>
-                <hr>
-                <p class="lead">Create saveable text snippets to store and share around with friends! PinBase is your own repository of information, with detailed statistics for each of your pins.</p>
-                <p class="lead">
-                    <a href="./createPin.php" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-dark aniButton">Create a Pin</a>
-                    <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-dark aniButton">View Pins</a>
-                </p>
+                <div class="container rounded">
+                    <img src="./img/logo.png" alt="PinBase" width="100" height="100" class="d-inline-block align-text-top">
+                    <h1 class="display-4 titleFont">Login</h1>
+                    <hr>
+                    <form action="./includes/_auth.php" method="POST">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary aniButton">Login</button>
+                        <button type="submit" class="btn btn-primary aniButton">Register</button>
+                    </form>
+                </div>
             </main>
             <!--Main-->
             <!--Footer-->
