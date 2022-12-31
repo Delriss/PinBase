@@ -9,9 +9,39 @@ $('#loginForm').submit(function(e) {
 
         success: function(data) {
           if (data == "You have successfully logged in.") {
-            location.href = "./index";
             alert(data);
+            window.location = "./index";
           }
         },           
     });
+});
+
+//Create User Form
+$('#createUser').submit(function (e) {
+  e.preventDefault();
+  
+  $.ajax({
+      url: './includes/_createUser',
+      type: 'POST',
+      data: $('#createUser').serialize(),
+      success: function (data) {
+          alert(data);
+          window.location = "./index";
+      }
+  });
+});
+
+//Create Pin Form
+$('#createPin').submit(function (e) {
+  e.preventDefault();
+  
+  $.ajax({
+      url: './includes/_createPin',
+      type: 'POST',
+      data: $('#createPin').serialize(),
+      success: function (data) {
+          alert(data);
+          window.location = "./createPin";
+      }
+  });
 });

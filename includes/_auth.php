@@ -27,6 +27,8 @@ if (mysqli_num_rows($result) == 1) { //Checks if info matches database
         $_SESSION['id'] = $row['UUID']; //Set ID
         $_SESSION['username'] = $row['username']; //Set Username
         $_SESSION['email'] = $email; //Set Email
+        $_SESSION['firstName'] = $row['firstName']; //Set First Name
+        $_SESSION['lastName'] = $row['lastName']; //Set Last Name
         
         echo "You have successfully logged in.";
     } else { //If Password is Incorrect

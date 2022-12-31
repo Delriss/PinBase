@@ -45,63 +45,64 @@ if (!isset($_SESSION['loggedin'])) {
     <!-- Navbar -->
 
     <!-- Main -->
-
-    <!-- HEADER BLOCK -->
-    <div class="px-4 py-5 my-5 text-center">
-        <!-- Title -->
-        <h1 class="display-5 fw-bold titleFont">Create a Pin!</h1>
-        <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Enter text to save and share. This can be: code, lyrics, documentation and more!</p>
+    <form id="createPin">
+        <!-- HEADER BLOCK -->
+        <div class="px-4 py-5 my-5 text-center">
             <!-- Title -->
-            <!--Pin Name-->
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Pin Name</span>
-                <input type="text" class="form-control" placeholder="Pin Name" aria-label="Pin Name" aria-describedby="basic-addon1">
-            </div>
-            <!--Pin Name-->
-            <!--Pin Selectors-->
-            <div class="input-group mb-3">
-                <label class="input-group-text" for="inputGroupSelect01">Visibility</label>
-                <select class="form-select" id="inputGroupSelect01">
-                    <option value="1">Public</option>
-                    <option value="2">Private</option>
-                </select>
-            </div>
-            <div class="input-group">
-                <label class="input-group-text">Expiry</label>
-                <div class="input-group-text">
-                    <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text input">
+            <h1 class="display-5 fw-bold titleFont">Create a Pin!</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">Enter text to save and share. This can be: code, lyrics, documentation and more!</p>
+                <!-- Title -->
+                <!--Pin Name-->
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Pin Name</span>
+                    <input type="pinName" id="pinName" name="pinName" class="form-control" placeholder="Pin Name" aria-label="Pin Name">
                 </div>
-                <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="DD/MM/YYYY">
-            </div>
-            <div class="input-group pt-3">
-                <label class="input-group-text">Password</label>
-                <div class="input-group-text">
-                    <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text input">
+                <!--Pin Name-->
+                <!--Pin Selectors-->
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="visibility">Visibility</label>
+                    <select class="form-select" id="visibility" name="visibility">
+                        <option value="1">Public</option>
+                        <option value="2">Private</option>
+                    </select>
                 </div>
-                <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Enter password...">
+                <div class="input-group">
+                    <label class="input-group-text">Expiry</label>
+                    <div class="input-group-text">
+                        <input class="form-check-input mt-0" type="checkbox" value="" id="expiryCheck" name="expiryCheck" aria-label="Radio button for following text input">
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with radio button" id="expiryDate" name="expiryDate" placeholder="DD/MM/YYYY">
+                </div>
+                <div class="input-group pt-3">
+                    <label class="input-group-text">Password</label>
+                    <div class="input-group-text">
+                        <input class="form-check-input mt-0" type="checkbox" value="" id="passwordCheck" name="passwordCheck" aria-label="Radio button for following text input">
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with radio button" id="password" name="password" placeholder="Enter password...">
+                </div>
+                <!--Pin Selectors-->
+                <!--Pin Content-->
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center pt-3">
+                    <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Save Pin</button>
+                    <button type="reset" class="btn btn-outline-secondary btn-lg px-4">Clear Pin</button>
+                </div>
+                <!--Pin Content-->
             </div>
-            <!--Pin Selectors-->
-            <!--Pin Content-->
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center pt-3">
-                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Save Pin</button>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Clear Pin</button>
+        </div>
+        <!-- HEADER BLOCK -->
+
+        <div class="b-example-divider"></div>
+
+        <!-- INPUT BLOCK -->
+        <div class="px-4 py-5 my-5 text-center">
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="pinText" name="pinText" style="min-height: 175px"></textarea>
+                <label for="pinText">Snippet Area</label>
             </div>
-            <!--Pin Content-->
         </div>
-    </div>
-    <!-- HEADER BLOCK -->
-
-    <div class="b-example-divider"></div>
-
-    <!-- INPUT BLOCK -->
-    <div class="px-4 py-5 my-5 text-center">
-        <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="min-height: 175px"></textarea>
-            <label for="floatingTextarea2">Snippet Area</label>
-        </div>
-    </div>
-    <!-- INPUT BLOCK -->
+        <!-- INPUT BLOCK -->
+    </form>
     <!-- Main -->
 
     <!-- Footer -->
