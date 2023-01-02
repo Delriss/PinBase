@@ -26,6 +26,7 @@
                     <nav class="nav nav-masthead justify-content-center float-md-end">
                         <a class="nav-link" aria-current="page" href="./index">Home</a>
                         <a class="nav-link" href="./createPin">Create a Pin</a>
+                        <a class="nav-link" href="./viewPins">View Pins</a>
                         <a class="nav-link active" href="./login">Login</a>
                     </nav>
                 </div>

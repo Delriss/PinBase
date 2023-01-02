@@ -33,7 +33,7 @@ if (isset($_POST['expiryCheck']))
 else
 {
     $expiryCheck = 0;
-    $expiryDate = 0;
+    $expiryDate = NULL;
 }
 if(isset($_POST['passwordCheck']))
 {
@@ -53,7 +53,6 @@ $pinName = mysqli_real_escape_string($connect, $pinName);
 $visibility = mysqli_real_escape_string($connect, $visibility);
 $expiryDate = mysqli_real_escape_string($connect, $expiryDate);
 $password = mysqli_real_escape_string($connect, $password);
-$pinText = mysqli_real_escape_string($connect, $pinText);
 
 //Create database entry
 $sql = "INSERT INTO `tblPins`(

@@ -62,7 +62,7 @@ $sql = "INSERT INTO `tblUsers`(
                                 CURRENT_TIMESTAMP())";
 
 $stmt = mysqli_prepare($connect, $sql); //Prepare SQL Query
-mysqli_stmt_bind_param($stmt, "ssss", $UUID, $email, $username, $firstName, $lastName, $password); //Bind Parameters
+mysqli_stmt_bind_param($stmt, "ssssss", $UUID, $username, $email, $firstName, $lastName, $password); //Bind Parameters
 
 if(mysqli_stmt_execute($stmt))
     echo "User Created";

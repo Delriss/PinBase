@@ -37,6 +37,7 @@ if (!isset($_SESSION['loggedin'])) {
                 <nav class="nav nav-masthead justify-content-center float-md-end">
                     <a class="nav-link" aria-current="page" href="./index">Home</a>
                     <a class="nav-link active" href="./createPin">Create a Pin</a>
+                    <a class="nav-link" href="./viewPins">View Pins</a>
                     <a class="nav-link" href="./login">Login</a>
                 </nav>
             </div>
@@ -70,16 +71,16 @@ if (!isset($_SESSION['loggedin'])) {
                 <div class="input-group">
                     <label class="input-group-text">Expiry</label>
                     <div class="input-group-text">
-                        <input class="form-check-input mt-0" type="checkbox" value="" id="expiryCheck" name="expiryCheck" aria-label="Radio button for following text input">
+                        <input class="form-check-input mt-0" type="checkbox" id="expiryCheck" name="expiryCheck" aria-label="Radio button for following text input">
                     </div>
-                    <input type="text" class="form-control" aria-label="Text input with radio button" id="expiryDate" name="expiryDate" placeholder="DD/MM/YYYY">
+                    <input type="date" class="form-control" aria-label="Text input with radio button" id="expiryDate" name="expiryDate" placeholder="DD-MM-YYYY" disabled>
                 </div>
                 <div class="input-group pt-3">
                     <label class="input-group-text">Password</label>
                     <div class="input-group-text">
-                        <input class="form-check-input mt-0" type="checkbox" value="" id="passwordCheck" name="passwordCheck" aria-label="Radio button for following text input">
+                        <input class="form-check-input mt-0" type="checkbox" id="passwordCheck" name="passwordCheck" aria-label="Radio button for following text input">
                     </div>
-                    <input type="text" class="form-control" aria-label="Text input with radio button" id="password" name="password" placeholder="Enter password...">
+                    <input type="text" class="form-control" aria-label="Text input with radio button" id="password" name="password" placeholder="Enter password..." disabled>
                 </div>
                 <!--Pin Selectors-->
                 <!--Pin Content-->

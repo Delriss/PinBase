@@ -12,6 +12,9 @@ $('#loginForm').submit(function(e) {
             alert(data);
             window.location = "./index";
           }
+          else {
+            alert(data);
+          }
         },           
     });
 });
@@ -44,4 +47,32 @@ $('#createPin').submit(function (e) {
           window.location = "./createPin";
       }
   });
+});
+
+// //On viewPin.php page load - load the pins
+$(document).ready(function() {
+  $.ajax({
+    url: './includes/_viewPins',
+    type: 'GET',
+    success: function (data) {
+      $('#viewPins').html(data);
+    }
+  });
+});
+
+//Checkboxes
+$('#expiryCheck').change(function() {
+  if(this.checked) {
+    $('#expiryDate').attr('disabled', false);
+  } else {
+    $('#expiryDate').attr('disabled', true);
+  }
+});
+
+$('#passwordCheck').change(function() {
+  if(this.checked) {
+    $('#password').attr('disabled', false);
+  } else {
+    $('#password').attr('disabled', true);
+  }
 });

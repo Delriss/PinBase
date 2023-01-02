@@ -30,6 +30,7 @@
                     <nav class="nav nav-masthead justify-content-center float-md-end">
                         <a class="nav-link active" aria-current="page" href="./index">Home</a>
                         <a class="nav-link" href="./createPin">Create a Pin</a>
+                        <a class="nav-link" href="./viewPins">View Pins</a>
                         <a class="nav-link" href="./login">Login</a>
                     </nav>
                 </div>
@@ -43,7 +44,7 @@
                 <p class="lead">Create saveable text snippets to store and share around with friends! PinBase is your own repository of information, with detailed statistics for each of your pins.</p>
                 <p class="lead">
                     <a href="./createPin" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-dark aniButton">Create a Pin</a>
-                    <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-dark aniButton">View Pins</a>
+                    <a href="./viewPins" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-dark aniButton">View Pins</a>
                 </p>
             </main>
             <!--Main-->

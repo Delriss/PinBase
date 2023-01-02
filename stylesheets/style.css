@@ -258,4 +258,11 @@ body {
 }
 .loginBackground {
   background: rgba(111, 21, 21, 0.514);
+}
+
+.pinBox {
+  width: 90%;
+  height: 100%;
+  color: white;
+  background-color: rgb(67, 67, 67);
 }/*# sourceMappingURL=style.css.map */
