@@ -11,6 +11,14 @@ $password = $_POST['password']; //Grab Password
 $email = mysqli_real_escape_string($connect, $email); //Escape Email
 $password = mysqli_real_escape_string($connect, $password); //Escape Password
 
+//Captcha check
+$captcha = $_POST['recapToken'];
+$secretKey = $_ENV["CAPTCHA_PRIVATE"];
+$reCAPTCHA = json_decode(file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha)));
+if ($reCAPTCHA->score <= 0.6){
+    die("Captcha failed.");
+}
+
 $sql = "SELECT * FROM tblUsers WHERE email = ?"; //SQL Query
 $stmt = mysqli_prepare($connect, $sql); //Prepare SQL Query
 mysqli_stmt_bind_param($stmt, "s", $email); //Bind Parameters

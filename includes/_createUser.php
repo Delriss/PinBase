@@ -19,7 +19,12 @@ function GenUUIDv4()
 
     return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
 }
-
+$captcha = $_POST['recapToken'];
+$secretKey = $_ENV["CAPTCHA_PRIVATE"];
+$reCAPTCHA = json_decode(file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha)));
+if ($reCAPTCHA->score <= 0.6){
+    die("Captcha failed.");
+}
 //Connect to database
 require_once("./_connect.php");
 
