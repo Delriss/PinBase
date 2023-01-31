@@ -29,15 +29,21 @@ $('#loginForm').submit(function(e) {
 //Create User Form
 $('#createUser').submit(function (e) {
   e.preventDefault();
-  
-  $.ajax({
-      url: './includes/_createUser',
-      type: 'POST',
-      data: $('#createUser').serialize(),
-      success: function (data) {
+  grecaptcha.ready(function () {
+    grecaptcha.execute('[YOUR_SITE_KEY]', {
+        action: 'create_comment'
+    }).then(function (token) {
+        $("#recapToken").val(token);
+        $.ajax({
+        url: './includes/_createUser',
+        type: 'POST',
+        data: $('#createUser').serialize(),
+        success: function (data) {
           alert(data);
           window.location = "./index";
-      }
+        }
+      });
+    });
   });
 });
 
