@@ -2,7 +2,7 @@
 $('#loginForm').submit(function(e) {
   e.preventDefault();
   grecaptcha.ready(function () {
-    grecaptcha.execute('[YOUR_SITE_KEY]', {
+    grecaptcha.execute('6Ld55UAkAAAAADqgU6Wjw1hHORSUgTX7e4mn85Rq', {
         action: 'create_comment'
     }).then(function (token) {
         $("#recapToken").val(token);
@@ -30,7 +30,7 @@ $('#loginForm').submit(function(e) {
 $('#createUser').submit(function (e) {
   e.preventDefault();
   grecaptcha.ready(function () {
-    grecaptcha.execute('[YOUR_SITE_KEY]', {
+    grecaptcha.execute('6Ld55UAkAAAAADqgU6Wjw1hHORSUgTX7e4mn85Rq', {
         action: 'create_comment'
     }).then(function (token) {
         $("#recapToken").val(token);
