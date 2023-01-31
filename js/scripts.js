@@ -1,8 +1,12 @@
 //Login Form
 $('#loginForm').submit(function(e) {
-    e.preventDefault();
-
-    $.ajax({
+  e.preventDefault();
+  grecaptcha.ready(function () {
+    grecaptcha.execute('[YOUR_SITE_KEY]', {
+        action: 'create_comment'
+    }).then(function (token) {
+        $("#recapToken").val(token);
+        $.ajax({
         type:'POST',
         url:'./includes/_auth',
         data:$('#loginForm').serialize(),
@@ -16,8 +20,10 @@ $('#loginForm').submit(function(e) {
           else {
             alert(data);
           }
-        },           
+        },
+      });           
     });
+  });
 });
 
 //Create User Form
