@@ -1,7 +1,0 @@
-To set up Recaptcha V3
-
-Go to the Google reCAPTCHA admin console.
-Create a new Recaptcha V3 key pair.
-Copy the Site key and Secret key.
-Paste the site key into the scripts.js file where it says [YOUR_SITE_KEY].
-Paste the Secret key into the .env file, following the format of the .env.example file
