@@ -2,7 +2,7 @@
 session_start();
 
 // Connect to the database
-require_once("./_connect.php");
+require_once("_connect.php");
 
 //Get all pins from DB
 $sql = "SELECT * FROM tblPins";

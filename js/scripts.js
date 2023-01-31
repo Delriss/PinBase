@@ -8,7 +8,8 @@ $('#loginForm').submit(function(e) {
         data:$('#loginForm').serialize(),
 
         success: function(data) {
-          if (data == "You have successfully logged in.") {
+          if(data.includes('You have successfully logged in.')){
+            //Output
             alert(data);
             window.location = "./index";
           }
